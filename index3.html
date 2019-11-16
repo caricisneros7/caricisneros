@@ -1,0 +1,42 @@
+<html>
+  <head>
+        <title>Galaxy World</title>
+    <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
+  </head>
+  <body>
+
+    <a-scene>
+        <a-camera position="0 2 10"></a-camera>
+        <a-sound src="src: url(MELTING.mp3)" autoplay="true" loop="true" position="0 2 5"></a-sound>
+        <a-assets>
+        <img id="sky" src="dliquid.jpg" crossorigin="anonymous"/>
+        <img src="https://img.gs/bbdkhfbzkk/stretch/https://i.imgur.com/25P1geh.png" id="grid" crossorigin="anonymous">
+        <img src="https://img.gs/bbdkhfbzkk/2048x1024,stretch/http://i.imgur.com/WMNH2OF.jpg" id="chrome" crossorigin="anonymous">
+        <img id="dliquid" src="https://imgur.com/xFzH28D" />
+        <a-asset-item id="dawningFont" src="https://cdn.glitch.com/c719c986-c0c5-48b8-967c-3cd8b8aa17f3%2FdawningOfANewDayRegular.typeface.json?1490305922844"></a-asset-item>
+        <a-asset-item id="exoFont" src="https://cdn.glitch.com/c719c986-c0c5-48b8-967c-3cd8b8aa17f3%2Fexo2Black.typeface.json?1490305922150"></a-asset-item>
+        <a-asset-item id="exoItalicFont" src="https://cdn.glitch.com/c719c986-c0c5-48b8-967c-3cd8b8aa17f3%2Fexo2BlackItalic.typeface.json?1490305922725"></a-asset-item>
+        </a-assets> 
+
+        <a-torus
+      color="#ff0044"
+       rotation="2 1.5 -5" radius="1"  material="color: magenta; metalness:1; roughness: 0.1; sphericalEnvMap: #sky;"
+      animation__position="property: object3D.position.y; to: 2.1; dir: alternate; dur: 2000; loop: true">
+      </a-torus>
+
+
+
+     
+
+
+       <a-entity 
+          geometry="primitive: plane; width: 10000; height: 10000; grid:3x3"
+          rotation="-90 0 0"
+          material="src: #grid; repeat: 10000 10000; transparent: true;metalness:9; roughness: 0.4; sphericalEnvMap: #sky;">
+
+       <a-sky src="#sky" rotation="0 -90 0"></a-sky>
+            </a-scene>
+          </body>
+        </html>
+        
